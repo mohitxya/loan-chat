@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && cp dev.html index.html && vite build && cp dist/index.html . && cp -r dist/assets . && mkdir -p docs && cp -r dist/* docs/",
     "deploy": "./scripts/deploy-gh-pages.sh",
     "preview": "vite preview",
     "test": "vitest run",
